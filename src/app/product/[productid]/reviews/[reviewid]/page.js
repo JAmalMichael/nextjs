@@ -1,4 +1,9 @@
+import { notFound } from "next/navigation";
+
 export default function ReviewDetails({ params }) {
+  if (parseInt(params.reviewid) > 1000) {
+    notFound();
+  }
   return (
     <div>
       <h1>
